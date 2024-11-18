@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-1: #171721;
+    --dark-2: #22222c;
+    --dark-3: #313233;
+    --red: #ff6b81;
+    --redDark: #ff4757;
+    --green: #7bed9f;
+    --greenDark: #20bf6b;
+    --blue: #45aaf2;
+    --buleDark: #2d98da;
+    --yellow: #eccc68;
+    --yellowDark: #f7b731;
+}
+
+body {
+    background-color: var(--dark-1);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+aside.side-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 82px;
+    height: 100%;
+    text-align: center;
+    background-color: var(--dark-2);
+    box-shadow: 6px 0 6px rgb(0,0,0,0.5);
+}
+
+aside.side-menu a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+}
+
+aside.side-menu .brand-logo {
+    padding: 16px 8px;
+    margin: 12px 00;
+    background-color: var(--dark-2);
+}
+
+aside.side-menu .brand-logo img {
+    width: 52px;
+}
+
+aside.side-menu ul {
+    position: relative;
+    list-style: none;
+    width: calc(100% -20px);
+    left: 20px;
+    background-color: linear-gradient(900deg, var(--red), var(--redDark));
+    border-radius: 50p 0 0 50px;
+    padding: 32px 0;
+}
+
+aside.side-menu ul:before,
+aside.side-menu ul:after {
+    content: '';
+    position:absolute;
+    height: 64px;
+    width: 100%;
+    right: 0;
+    background-image: radial-gradient(circle,var(--dark-2) 72%, transparent 72%),
+                linear-gradient(-45deg, var(--redDark), var(--red));
+
+    background-repeat: no-repeat;
+    background-size: 140px 140px 52px 52px;
+}
+
+aside.side-menu ul:before {
+    top: -60px;
+    --deg: 235deg;
+    background-position: -78px -66px, right bottom;
+}
+
+aside.side-menu ul:after {
+    bottom: -60px;
+    --deg: 235deg;
+    background-position: -78px, -10px, right top;
+}
+
+aside.side-menu ul li{
+    margin: 8px 0;
+}
+
+aside.side-menu ul li a.active,
+aside.side-menu ul li a:hover {
+    background: linear-gradient(900deg, rgba(255,255,255,0.2), transparent);
+}
+
+aside.side-menu ul .magic-light {
+    position: absolute;
+    height: 55px;
+    width: 4px;
+    background-color: var(--yellowDark);
+    top: 40px;
+    left: 20px;
+    box-shadow: 6px 0 5px 1px var(--yellow),
+                14px  0 16px 2px var(--yellow),
+}
