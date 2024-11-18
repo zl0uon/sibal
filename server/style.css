@@ -195,3 +195,56 @@ aside.side-menu ul .magic-light {
     background-image: linear-gradient(45deg, transparent 70%, transparent 70%, rgba(69,170,0.2));
     background-color: var(--dark-2);
 }
+
+.payment-widget .widget-inner {
+    display: flex;
+    padding: 16px;
+    font-size: 12px;
+    background-color: radial-gradient(circle, rgba(255,255,255,0.2) 72%, transparent 72%);
+    background-repeat: no-repeat;
+    background-color: var(--red);
+    background-size: 160px 160px;
+    background-position: right -40%;
+}
+
+.payment-widget .widget-item:nth-chile(1) .width-inner {
+    --paymentColor: var(var(--greenDark));
+}
+
+.payment-widget .widget-item:nth-chile(2) .width-inner {
+    --paymentColor: var(var(--blueDark));
+}
+
+.payment-widget .widget-item:nth-chile(3) .width-inner {
+    --paymentColor: var(var(--yellowDark));
+}
+
+.payment-widget .widget-item:nth-chile(4) .width-inner {
+    --paymentColor: var(var(--redDark));
+}
+
+.widget-inner .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    width: 54px;
+    font-size: 32px;
+    margin-right: 6px;
+}
+
+.widget-inner .payment-content h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.card-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.chart-content {
+    height: 320px;
+    width: 100%;
+}
