@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -16,7 +18,23 @@
     --buleDark: #2d98da;
     --yellow: #eccc68;
     --yellowDark: #f7b731;
+    --transition: all cubic-bezier(0.127,0.885,0.3);
 }
+
+a {
+    text-decoration: none;
+}
+
+.gradient-bg {
+    background: linear-gradient(45deg, var(--red), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.w-25 { width: 25%; }
+.w-50 { width: 50; }
+.w-75 { width: 75%; }
+.w-100 { width: 100%; }
 
 body {
     background-color: var(--dark-1);
@@ -95,6 +113,13 @@ aside.side-menu ul li{
     margin: 8px 0;
 }
 
+aside.side-menu ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+}
+
 aside.side-menu ul li a.active,
 aside.side-menu ul li a:hover {
     background: linear-gradient(900deg, rgba(255,255,255,0.2), transparent);
@@ -108,5 +133,65 @@ aside.side-menu ul .magic-light {
     top: 40px;
     left: 20px;
     box-shadow: 6px 0 5px 1px var(--yellow),
-                14px  0 16px 2px var(--yellow),
+                14px  0 16px 2px var(--yellow);
+    transition: var(--transition);
+}
+
+.main-container {
+    width: calc(100% - 82px);
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 22px 32px;
+}
+
+.header-action {
+    list-style: none;
+    display: flex;
+    font-size: 18px;
+}
+
+.header-action li {
+    padding-left: 16px;
+}
+
+.header-action li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    background-color: var(--dark-3);
+    border-radius: 50%;
+}
+
+.content {
+    height: calc(100% -80px);
+    padding: 0 32px;
+    overflow: auto;
+}
+
+.content .widget-title {
+    padding: 12px 0;
+}
+
+.content .widget-content {
+    display: flex;
+    padding: 12px 0;
+    margin: 0 -16px;
+}
+
+.content .widget-item {
+    padding: 0 16px;
+}
+
+.content .widget-inner {
+    padding: 32px;
+    border-radius: 32px;
+    background-image: linear-gradient(45deg, transparent 70%, transparent 70%, rgba(69,170,0.2));
+    background-color: var(--dark-2);
 }
