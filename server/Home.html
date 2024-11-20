@@ -5,136 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Water Quality Data</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1 class="gradient-bg">부산광역시 수질 환경 조사</h1>
+  </header>
+
   <div class="container">
+    <!-- Sidebar -->
     <aside class="side-menu">
       <span class="brand-logo">
-        <img src="./img/logo.png" alt="Brand Logo">
+        <img src="/Users/apple/sibal-1/img/부산광역시.png" alt="Brand Logo">
       </span>
-
       <ul class="nav">
         <li class="nav-item">
-          <a href="#" class="nav-link active"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=speed" /></a>
+          <a href="#" class="nav-link active">
+            <span class="material-symbols-outlined">speed</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=query_stats" /></a>
+          <a href="#" class="nav-link">
+            <span class="material-symbols-outlined">query_stats</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search_insights" /></a>
+          <a href="#" class="nav-link">
+            <span class="material-symbols-outlined">search_insights</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle" /></a>
+          <a href="#" class="nav-link">
+            <span class="material-symbols-outlined">account_circle</span>
+          </a>
         </li>
       </ul>
       <span class="settings">
-        <a href="#"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=settings" /></a>
+        <a href="#">
+          <span class="material-symbols-outlined">settings</span>
+        </a>
       </span>
     </aside>
+
+    <!-- Main Content -->
     <div class="main-container">
+      <!-- Top Navigation -->
       <div class="top-nav">
+        <ul class="header-action">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="material-symbols-outlined">notifications</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="helpLink">
+              <span class="material-symbols-outlined">help</span>
+            </a>
+          </li>
+        </ul>
       </div>
+
+      <!-- Widgets -->
       <div class="content">
-        <div class="widget payment-widget">
-        </div>
-          <div class="widget invoice-widget">
-            <div class="widget-title">
-              <h2>Invoices</h2>
-            </div>
-            <div class="widget-content">
-              <div class="widget-item w-75">
-                <div class="widget-inner">
-                  <div class="card-title gradient-bg">Revenue</div>
-                  <div class="card-content">
-                    <div id="revenueChart" class="chart-content">
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
+        <!-- Revenue Widget -->
+        <div class="widget invoice-widget">
           <div class="widget-title">
-            <h2>Bills</h2>
+            <h2>Invoices</h2>
           </div>
           <div class="widget-content">
-            <div class="widget-item w-25">
+            <div class="widget-item w-75">
               <div class="widget-inner">
-                <span class="icon"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=paid" /></span>
-                <div class="payment-content">
-                  <h3>2,281</h3>
-                  <span>Total Invoices</span>
+                <div class="card-title gradient-bg">Revenue</div>
+                <div class="card-content">
+                  <div id="revenueChart" class="chart-content"></div>
                 </div>
               </div>
             </div>
-            <div class="widget-content">
-              <div class="widget-item w-25">
-                <div class="widget-inner">
-                  <span class="icon"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=paid" /></span>
-                  <div class="payment-content">
-                    <h3>3,118</h3>
-                    <span>Paid Invoices</span>
-                  </div>
-                </div>
+          </div>
+        </div>
+
+        <!-- Payment Widget -->
+        <div class="widget-title">
+          <h2>Bills</h2>
+        </div>
+        <div class="widget-content">
+          <!-- Total Invoices -->
+          <div class="widget-item w-25">
+            <div class="widget-inner">
+              <span class="icon material-symbols-outlined">paid</span>
+              <div class="payment-content">
+                <h3>2,281</h3>
+                <span>Total Invoices</span>
               </div>
-              <div class="widget-content">
-                <div class="widget-item w-25">
-                  <div class="widget-inner">
-                    <span class="icon"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=paid" /></span>
-                    <div class="payment-content">
-                      <h3>3,118</h3>
-                      <span>Paid Invoices</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-content">
-                  <div class="widget-item w-25">
-                    <div class="widget-inner">
-                      <span class="icon"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=paid" /></span>
-                      <div class="payment-content">
-                        <h3>1,963</h3>
-                        <span>Tatal Invoices sent</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="widget-content">
-                    <div class="widget-item w-25">
-                      <div class="widget-inner">
-                        <span class="icon"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=paid" /></span>
-                        <div class="payment-content">
-                          <h3>2,443</h3>
-                          <span>Uppaid Invoices</span>
-                        </div>
-                      </div>
-                    </div>
+            </div>
+          </div>
+          <!-- Paid Invoices -->
+          <div class="widget-item w-25">
+            <div class="widget-inner">
+              <span class="icon material-symbols-outlined">paid</span>
+              <div class="payment-content">
+                <h3>3,118</h3>
+                <span>Paid Invoices</span>
+              </div>
+            </div>
+          </div>
+          <!-- Unpaid Invoices -->
+          <div class="widget-item w-25">
+            <div class="widget-inner">
+              <span class="icon material-symbols-outlined">paid</span>
+              <div class="payment-content">
+                <h3>1,963</h3>
+                <span>Total Invoices Sent</span>
+              </div>
+            </div>
+          </div>
+          <div class="widget-item w-25">
+            <div class="widget-inner">
+              <span class="icon material-symbols-outlined">paid</span>
+              <div class="payment-content">
+                <h3>2,443</h3>
+                <span>Unpaid Invoices</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <h1 class="gradient-bg">부산광역시 수질 환경 조사</h1>
-      <ul class="header-action">
-        <li class="nav-item">
-          <a href="#" class="nav-link"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=notifications" /></a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=help" /></a>
-        </li>
     </div>
   </div>
+
 </body>
-<script>
-  let $magicline = document.querySelector('.magic-light')
-      $sideMenuItem = document.querySelectorAll('.aside.side-menu li a nav-link');
-
-      $sideMenuItem.forEach((item) => {
-        item.addEventListener('click', function() {
-          $sideMenuItem.forEach((elem) => {
-            elem.classList.remove('active');
-          });
-          this.classList.add('active');
-          $magicLine.style.top = this.offsetTop + 'px';
-        })
-      })
-</script>
-
-
-
 </html>
-
