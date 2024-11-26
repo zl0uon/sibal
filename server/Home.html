@@ -1,167 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Water Quality Data</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Material Symbols -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-</head>
-<body>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>   
+  <meta charset="UTF-8">   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+  <title>Water Quality Data</title>   
+  <link rel="stylesheet" href="style.css">   
+  <!-- Material Symbols -->   
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"> 
+</head> 
+<body>       
+  <header class="header">     
+    <h1 class="gradient-bg">부산광역시 수질 환경 조사</h1>   
+  </header>    
 
-  
-  <header class="header">
-    <h1 class="gradient-bg">부산광역시 수질 환경 조사</h1>
-  </header>
+  <div class="container">         
+    <aside class="side-menu">       
+      <span class="brand-logo">         
+        <img src="/Users/apple/sibal-1/img/부산광역시.png" alt="Brand Logo">       
+      </span>       
+      <ul class="nav">         
+        <li class="nav-item">           
+          <a href="#" class="nav-link active">             
+            <span class="material-symbols-outlined">speed</span>           
+          </a>         
+        </li>         
+        <li class="nav-item">           
+          <a href="#" class="nav-link">             
+            <span class="material-symbols-outlined">query_stats</span>           
+          </a>         
+        </li>         
+        <li class="nav-item">           
+          <a href="#" class="nav-link">             
+            <span class="material-symbols-outlined">search_insights</span>           
+          </a>         
+        </li>         
+        <li class="nav-item">           
+          <a href="#" class="nav-link">             
+            <span class="material-symbols-outlined">account_circle</span>           
+          </a>         
+        </li>       
+      </ul>       
+      <span class="settings">         
+        <a href="#">           
+          <span class="material-symbols-outlined">settings</span>         
+        </a>       
+      </span>     
+    </aside>       
 
-  <div class="container">
-   
-    <aside class="side-menu">
-      <span class="brand-logo">
-        <img src="/Users/apple/sibal-1/img/부산광역시.png" alt="Brand Logo">
-      </span>
-      <ul class="nav">
-        <li class="nav-item">
-          <a href="#" class="nav-link active">
-            <span class="material-symbols-outlined">speed</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="material-symbols-outlined">query_stats</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="material-symbols-outlined">search_insights</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="material-symbols-outlined">account_circle</span>
-          </a>
-        </li>
-      </ul>
-      <span class="settings">
-        <a href="#">
-          <span class="material-symbols-outlined">settings</span>
-        </a>
-      </span>
-    </aside>
+    <div class="main-container">           
+      <div class="top-nav">         
+        <ul class="header-action">           
+          <li class="nav-item">             
+            <a href="#" class="nav-link">               
+              <span class="material-symbols-outlined">notifications</span>             
+            </a>           
+          </li>           
+          <li class="nav-item">             
+            <a href="#" class="nav-link" id="helpLink">               
+              <span class="material-symbols-outlined">help</span>             
+            </a>           
+          </li>         
+        </ul>       
+      </div>              
 
+      <div class="content">                  
+        <div class="widget invoice-widget">           
+          <div class="widget-title">             
+            <h2>Invoices</h2>           
+          </div>           
+          <div class="widget-content">             
+            <div class="widget-item w-75">               
+              <div class="widget-inner">                 
+                <div class="card-title gradient-bg">Revenue</div>                 
+                <div class="card-content">                   
+                  그래프입니다.                   
+                  <div id="revenueChart" class="chart-content"></div>                   
+                  <div>                     
+                    <canvas id="myChart"></canvas>                   
+                  </div>                   
+                  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>                 
+                </div>               
+              </div>             
+            </div>           
+          </div>         
+        </div>        
 
-    <div class="main-container">
-   
-      <div class="top-nav">
-        <ul class="header-action">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <span class="material-symbols-outlined">notifications</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" id="helpLink">
-              <span class="material-symbols-outlined">help</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+        <div class="widget-title">           
+          <h2>Bills</h2>         
+        </div>         
+        <div class="widget-content">                             
+          <div class="widget-item w-25">             
+            <div class="widget-inner">               
+              <span class="icon material-symbols-outlined">paid</span>               
+              <div class="payment-content">                 
+                <h3>2,281</h3>                 
+                <span>Total Invoices</span>               
+              </div>             
+            </div>           
+          </div>                      
 
-     
-      <div class="content">
-        
-        <div class="widget invoice-widget">
-          <div class="widget-title">
-            <h2>Invoices</h2>
-          </div>
-          <div class="widget-content">
-            <div class="widget-item w-75">
-              <div class="widget-inner">
-                <div class="card-title gradient-bg">Revenue</div>
-                <div class="card-content">
-                  // 그래프 차트 생성입니다
-                  <div id="revenueChart" class="chart-content"></div>
-                  <div>
-                    <canvas id="myChart"></canvas>
-                  </div>
-                  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <div class="widget-item w-25">             
+            <div class="widget-inner">               
+              <span class="icon material-symbols-outlined">paid</span>               
+              <div class="payment-content">                 
+                <h3>3,118</h3>                 
+                <span>Paid Invoices</span>               
+              </div>             
+            </div>           
+          </div>                     
 
-      // 여기부턴 아니에요
-        <div class="widget-title">
-          <h2>Bills</h2>
-        </div>
-        <div class="widget-content">
-           
-                <div class="widget-item w-25">
-            <div class="widget-inner">
-              <span class="icon material-symbols-outlined">paid</span>
-              <div class="payment-content">
-                <h3>2,281</h3>
-                <span>Total Invoices</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="widget-item w-25">
-            <div class="widget-inner">
-              <span class="icon material-symbols-outlined">paid</span>
-              <div class="payment-content">
-                <h3>3,118</h3>
-                <span>Paid Invoices</span>
-              </div>
-            </div>
-          </div>
-         
-          <div class="widget-item w-25">
-            <div class="widget-inner">
-              <span class="icon material-symbols-outlined">paid</span>
-              <div class="payment-content">
-                <h3>1,963</h3>
-                <span>Total Invoices Sent</span>
-              </div>
-            </div>
-          </div>
-          <div class="widget-item w-25">
-            <div class="widget-inner">
-              <span class="icon material-symbols-outlined">paid</span>
-              <div class="payment-content">
-                <h3>2,443</h3>
-                <span>Unpaid Invoices</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  // 그래프 자바스크립트문입니다.
-  <script>
-    const ctx = document.getElementById('myChart');
-  
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-  </script>
-</body>
+          <div class="widget-item w-25">             
+            <div class="widget-inner">               
+              <span class="icon material-symbols-outlined">paid</span>               
+              <div class="payment-content">                 
+                <h3>1,963</h3>                 
+                <span>Total Invoices Sent</span>               
+              </div>             
+            </div>           
+          </div>           
+          <div class="widget-item w-25">             
+            <div class="widget-inner">               
+              <span class="icon material-symbols-outlined">paid</span>               
+              <div class="payment-content">                 
+                <h3>2,443</h3>                 
+                <span>Unpaid Invoices</span>               
+              </div>             
+            </div>           
+          </div>         
+        </div>       
+      </div>     
+    </div>   
+  </div>   
+
+  <script>     
+    const ctx = document.getElementById('myChart');        
+
+    new Chart(ctx, {       
+      type: 'line', 
+      data: {         
+        labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],         
+        datasets: [{           
+          label: '# of Votes',           
+          data: [12, 19, 3, 5, 2, 3],           
+          borderWidth: 1,           
+          tension: 0.4         
+        }]     
+      },       
+      options: {         
+        scales: {           
+          y: {             
+            beginAtZero: true           
+          }         
+        }       
+      }     
+    });   
+  </script> 
+</body> 
 </html>
